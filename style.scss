@@ -1,5 +1,5 @@
 /*
-Theme Name: aromaesabor
+Theme Name: pokervintage
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -19,7 +19,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
- 
+
 @font-face {
     font-family: FuturaBT;
     src: url(font/tt0142m_.ttf);
@@ -27,11 +27,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 #page{
 	font-family: Verdana, Geneva, sans-serif;
-	color:#373737;
+	color:white;
 	text-align:center;
+	background-color: #0b0b0f;
 
 	a{
-		color:#373737;
+		color:white;
 	}
 
 	a:hover{

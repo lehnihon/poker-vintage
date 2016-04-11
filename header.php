@@ -17,17 +17,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page">
 	<header id="header">
 		<div class="container">
 			<div class="row header-logo">
@@ -37,16 +30,13 @@
 							<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 						</button>
 						<ul class="dropdown-menu">
-						<li><a href="<?php echo esc_url( home_url( '/' )."sobre" ); ?>">Aroma e Sabor</a></li
-						><li><a href="<?php echo esc_url( home_url( '/' )."atelie-culinario" ); ?>">Ateliê Culinário</a></li
-						><li><a href="<?php echo esc_url( home_url( '/' ) )."eventos"; ?>">Eventos</a></li
+						<li><a href="<?php echo esc_url( home_url( '/' )."sobre" ); ?>">Home</a></li
+						><li><a href="<?php echo esc_url( home_url( '/' )."atelie-culinario" ); ?>">Vintage Poker</a></li
+						><li><a href="<?php echo esc_url( home_url( '/' ) )."eventos"; ?>">Agenda</a></li
 						><li><a href="<?php echo esc_url( home_url( '/' ) )."fotos"; ?>">Fotos</a></li
-						><li><a href="<?php echo esc_url( home_url( '/' ) )."blog"; ?>">Blog</a></li
-						><li><a href="<?php echo esc_url( home_url( '/' ) )."localizacao"; ?>">Localização</a></li
-						><li><a href="<?php echo esc_url( home_url( '/' ) )."contato"; ?>">Contato</a></li>
-						</ul>								
+						><li><a href="<?php echo esc_url( home_url( '/' ) )."blog"; ?>">Contato</a></li></ul>
 					</div>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="e-claro" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/logo-top.png"; ?>"/></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="e-claro" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/logo.png"; ?>"/></a>
 				</div>
 				<div class="col-md-offset-3 col-md-2 redes">
 					<ul class="redes_sociais_header">
@@ -60,15 +50,12 @@
 			<div class="row header-menu">
 				<div class="col-md-12">
 					<nav>
-
 						<ul class="menu-principal clearfix">
-							<li><a href="<?php echo esc_url( home_url( '/' )."sobre" ); ?>">Aroma e Sabor</a></li
-							><li><a href="<?php echo esc_url( home_url( '/' )."atelie-culinario" ); ?>">Ateliê Culinário</a></li
-							><li><a href="<?php echo esc_url( home_url( '/' ) )."eventos"; ?>">Eventos</a></li
-							><li><a href="<?php echo esc_url( home_url( '/' ) )."fotos"; ?>">Fotos</a></li
-							><li><a href="<?php echo esc_url( home_url( '/' ) )."blog"; ?>">Blog</a></li
-							><li><a href="<?php echo esc_url( home_url( '/' ) )."localizacao"; ?>">Localização</a></li
-							><li><a href="<?php echo esc_url( home_url( '/' ) )."contato"; ?>">Contato</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/' )."sobre" ); ?>">Home</a></li
+						><li><a href="<?php echo esc_url( home_url( '/' )."atelie-culinario" ); ?>">Vintage Poker</a></li
+						><li><a href="<?php echo esc_url( home_url( '/' ) )."eventos"; ?>">Agenda</a></li
+						><li><a href="<?php echo esc_url( home_url( '/' ) )."fotos"; ?>">Fotos</a></li
+						><li><a href="<?php echo esc_url( home_url( '/' ) )."blog"; ?>">Contato</a></li>
 						</ul>
 					</nav><!-- #site-navigation -->						
 				</div>
