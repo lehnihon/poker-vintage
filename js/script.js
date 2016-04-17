@@ -15,7 +15,7 @@
 	});
 
 	$(window).scroll(function() {
-        if ($(this).scrollTop() > 600) {
+        if ($(this).scrollTop() > 550) {
 			var FunctionOne = function () {
 				var r = $.Deferred();
 
@@ -38,19 +38,8 @@
 
         }
 
-        if ($(this).scrollTop() > 900) {
-        	$(".anima-d").css('visibility','visible');
-        	$(".anima-d").addClass('animated bounceInLeft');
-        	$(".anima-e").css('visibility','visible');
-        	$(".anima-e").addClass('animated bounceInLeft');
-
-        	$(".anima-f").css('visibility','visible');
-        	$(".anima-f").addClass('animated bounceInRight');
-        	$(".anima-g").css('visibility','visible');
-        	$(".anima-g").addClass('animated bounceInRight');
-
-        }
-        if($(this).scrollTop() > 1300) {
+  
+        if($(this).scrollTop() > 1100) {
 			var FunctionOne = function () {
 				var r = $.Deferred();
 
