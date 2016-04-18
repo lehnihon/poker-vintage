@@ -14,8 +14,9 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-md-12">
 					<h1 class="small">Vintage Poker Club</h1>
+					<h4>Jogue Poker com os melhores no Vintage Poker Club.</h4>
 				</div>
-			</div>
+			</div><br><br>
 			<div class="row">
 				<div class="col-md-4 anima-a">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="e-cinza" src="<?php echo dirname( get_bloginfo('stylesheet_url'))."/images/banner-1.jpg"; ?>"/></a>
