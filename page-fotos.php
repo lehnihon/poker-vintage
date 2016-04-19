@@ -2,8 +2,8 @@
 get_header(); ?>
 
 <div id="content">
-	<section id="sobre">
-		<h1 class="title-full small"><div class="animated bounceIn">Fotos</div></h1>
+	<section id="fotos">
+		<h1 class="small"><div class="animated bounceIn">Fotos</div></h1>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

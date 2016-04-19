@@ -160,73 +160,27 @@ add_filter('template_include', 'template_chooser');
 function change_post_menu_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = 'Produtos';
-    $submenu['edit.php'][5][0] = 'Produtos';
-    $submenu['edit.php'][10][0] = 'Adicionar Produtos';
+    $menu[5][0] = 'Agenda';
+    $submenu['edit.php'][5][0] = 'Agenda';
+    $submenu['edit.php'][10][0] = 'Adicionar Agenda';
     echo '';
 }
 function change_post_object_label() {
         global $wp_post_types;
         $labels = &$wp_post_types['post']->labels;
-        $labels->name = 'Produtos';
-        $labels->singular_name = 'Produto';
-        $labels->add_new = 'Adicionar Produto';
-        $labels->add_new_item = 'Adicionar Produto';
-        $labels->edit_item = 'Editar Produto';
-        $labels->new_item = 'Produto';
-        $labels->view_item = 'Ver Produto';
-        $labels->search_items = 'Procurar Produto';
-        $labels->not_found = 'Produto não encontrado';
-        $labels->not_found_in_trash = 'Sem Produtos na lixeira';
+        $labels->name = 'Agenda';
+        $labels->singular_name = 'Agenda';
+        $labels->add_new = 'Adicionar Agenda';
+        $labels->add_new_item = 'Adicionar Agenda';
+        $labels->edit_item = 'Editar Agenda';
+        $labels->new_item = 'Agenda';
+        $labels->view_item = 'Ver Agenda';
+        $labels->search_items = 'Procurar Agenda';
+        $labels->not_found = 'Agenda não encontrado';
+        $labels->not_found_in_trash = 'Sem Agendas na lixeira';
 }
 add_action( 'init', 'change_post_object_label' );
 add_action( 'admin_menu', 'change_post_menu_label' );
-
-function register_post_type_blog(){
-	$singular = 'Blog Post';
-	$plural = 'Blog Posts';
-	$labels = array(
-		'name' => $plural,
-		'singular_name' => $singular,
-		'add_new_item' => 'Adicionar novo '.$singular,
-		);
-	$args = array(
-		'labels' => $labels,
-		'public' => true,
-        'supports' => array('title', 'editor','thumbnail'),
-        'menu_position' => 5
-		);
-
-	register_post_type('blog',$args);
-}
-add_action(	'init','register_post_type_blog');
-flush_rewrite_rules();
-function register_taxonomy_categoria_blog(){
-    $labels = array(
-        'name'              => _x( 'Categoria', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Categorias', 'taxonomy singular name' ),
-        'search_items'      => __( 'Procurar Categoria' ),
-        'all_items'         => __( 'Todas Categorias' ),
-        'parent_item'       => __( 'Parent Course' ),
-        'parent_item_colon' => __( 'Parent Course:' ),
-        'edit_item'         => __( 'Editar Categoria' ),
-        'update_item'       => __( 'Atualizar Categoria' ),
-        'add_new_item'      => __( 'Adicionar Categoria' ),
-        'new_item_name'     => __( 'Nome Nova Categoria' ),
-        'menu_name'         => __( 'Categoria' ),
-    );
- 
-    $args = array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'categoria-blog' ),
-    );
-	register_taxonomy( 'categoria_blog', 'blog', $args );
-}
-add_action('init','register_taxonomy_categoria_blog');
 
 function register_post_type_fotos(){
 	$singular = 'Foto';
