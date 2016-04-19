@@ -1,25 +1,16 @@
 <?php
-get_header('blog'); ?>
+get_header(); ?>
 
 <div id="content">
-	<section id="blog">
+	<section id="agenda">
 		<div class="container">
 			<div class="row">
-				<?php putRevSlider( "banner-blog" ) ?>
-			</div>
-			<div class="row menu-blog">
-				<div class="col-md-4" style="background-color:#b5ab3a"><a href="#">Notícias</a></div>
-				<div class="col-md-4" style="background-color:#a79e34"><a href="#">Dicas</a></div>
-				<div class="col-md-4" style="background-color:#b5ab3a"><a href="#">Receitas</a></div>
-			</div>
-			<div class="row posts">
-				<div class="col-md-8">
+				<div class="col-md-10 col-md-offset-1">
 					<?php 
 					$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
 					$args = array(
-						'post_type' => 'blog',
-						'posts_per_page' => 3,
+						'posts_per_page' => 4,
 					    'orderby' => 'post_date',
 					    'order' => 'DESC',
 					    'paged' => $paged);
@@ -31,9 +22,7 @@ get_header('blog'); ?>
 						<?php /* Start the Loop */ ?>
 						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-							<?php
-								get_template_part( 'template-parts/content', get_post_format() );
-							?>
+							<?php get_template_part( 'template-parts/content'); ?>
 
 						<?php endwhile; ?>
 						<div class="paginacao">
@@ -52,9 +41,6 @@ get_header('blog'); ?>
 						<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 					<?php endif; ?>
-				</div>
-				<div class="col-md-4">
-					<?php get_sidebar(); ?>
 				</div>
 			</div>
 		</div><!-- .container -->

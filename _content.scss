@@ -75,6 +75,21 @@ div#content{
 		padding:50px 0;
 	}
 
+	section#agenda{
+		article{
+			padding:50px 0;
+			border-bottom:2px solid white; 
+		}
+		div.paginacao{
+			padding:50px;
+		}
+
+	}
+
+	section#agenda-detalhes{
+		padding-bottom:50px;
+	}
+
 	section#redes-bot{
 		background-color:white;
 		padding:80px 0;	
